@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    <h1 class="file_header">Available Photos</h1>
+
+    <div class="img_container">
+        {% for filename in upload %}
+            <div class="image">
+                <img src="{{ url_for('uploads', filename=filename|basename) }}" alt="{{ filename }}">
+            </div>
+        {% endfor %}
+    </div>
+
+    {% include 'flash_messages.html' %}
+{% endblock %}

@@ -18,3 +18,20 @@ body {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+
+.img_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px; 
+}
+
+.image {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
